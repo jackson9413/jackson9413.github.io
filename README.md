@@ -1,2 +1,1 @@
-# jackson9413.github.io
-This is a personal website using Github Pages.
+<p>This is a personal website using Github Pages. It contains About, CV, and Blog sections. </p>
