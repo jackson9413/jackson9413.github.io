@@ -4,7 +4,15 @@ title: CV of Your Name
 ---
 
 	<div class="cv">
-		<a href="#" class="download" title="Download CV as PDF">Download CV</a>			
+				<a href="#" class="download" title="Download CV as PDF" onclick="generatePDF()">Download CV</a>
+				
+				<script>
+				  function generatePDF() {
+				    const doc = new jsPDF();
+				    doc.fromHTML(document.body);
+				    doc.save('cv.pdf');
+				  }
+				</script>	
 					<h2>JIAQI (JACK) CHENG</h2>
 					<address>
 					St. Louis, MO 63123, United States<br>
