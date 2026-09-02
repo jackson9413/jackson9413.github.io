@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiaqi Cheng — Data Engineer & AI Builder</title>
+  <meta name="description" content="Jiaqi Cheng — Data Engineer specializing in Microsoft Fabric, Azure, Databricks, and Spark. Builder of full-stack AI applications." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['SF Mono', 'Menlo', 'Monaco', 'monospace'],
+          },
+          colors: {
+            ink: {
+              50:  '#f7f8fa',
+              100: '#eef0f3',
+              200: '#d8dde3',
+              300: '#b6bfca',
+              400: '#8a96a6',
+              500: '#5d6877',
+              600: '#3f4855',
+              700: '#2b323c',
+              800: '#1c2129',
+              900: '#0f131a',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-feature-settings: 'cv02','cv03','cv04','cv11'; }
+    .gradient-text {
+      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-link {
+      position: relative;
+      padding: 0.25rem 0;
+      color: #5d6877;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #0f131a; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 0; height: 1px;
+      background: #0f131a;
+      transition: width 0.2s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8125rem;
+      background: #f7f8fa;
+      color: #2b323c;
+      border: 1px solid #eef0f3;
+      transition: all 0.15s;
+    }
+    .skill-pill:hover {
+      border-color: #b6bfca;
+      transform: translateY(-1px);
+    }
+    .section-anchor { scroll-margin-top: 5rem; }
+    @media print {
+      .no-print { display: none !important; }
+      body { font-size: 11pt; }
+    }
+  </style>
+</head>
+<body class="bg-white text-ink-800 font-sans antialiased">
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="no-print sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-ink-100">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight text-ink-900">Jiaqi Cheng</a>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="/Jack_Cheng_CV.pdf" target="_blank" rel="noopener" class="nav-link font-medium">CV ↓</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-5xl mx-auto px-6">
+
+    <!-- ========== HERO ========== -->
+    <section class="pt-20 pb-16">
+      <p class="text-sm font-medium text-ink-500 mb-3">St. Louis, Missouri · Available for senior data engineer roles</p>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-ink-900 leading-tight mb-6">
+        Hi, I'm Jiaqi.<br/>
+        I build <span class="gradient-text">data platforms</span> and <span class="gradient-text">AI tools</span> that turn complexity into clarity.
+      </h1>
+      <p class="text-lg text-ink-600 max-w-2xl leading-relaxed">
+        Data engineer with 7+ years of experience designing cloud data platforms on Azure and Fabric.
+        Currently leading enterprise data transformation at ARCO while building full-stack AI applications
+        as a side project.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#experience" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-ink-900 text-white text-sm font-medium hover:bg-ink-700 transition">
+          See my work
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="mailto:jqcheng9413@yahoo.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:border-ink-400 hover:text-ink-900 transition">
+          Email me
+        </a>
+        <a href="https://github.com/jackson9413" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:border-ink-400 hover:text-ink-900 transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/jiaqicheng9413" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:border-ink-400 hover:text-ink-900 transition">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section-anchor py-16 border-t border-ink-100">
+      <h2 class="text-3xl font-bold tracking-tight text-ink-900 mb-8">About</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-ink-600 leading-relaxed">
+        <p class="md:col-span-2">
+          I'm a data engineer and analyst with 7+ years of experience building scalable data platforms across
+          healthcare, finance, education, and construction. I specialize in Azure, Microsoft Fabric, Databricks,
+          and Spark, with a strong focus on transforming complex data into actionable business insights.
+        </p>
+        <p class="md:col-span-1">
+          Currently at <strong class="text-ink-800">ARCO</strong> leading enterprise data transformation.
+          Previously at BCITO, Equifax, and Health Quality & Safety Commission NZ.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="section-anchor py-16 border-t border-ink-100">
+      <h2 class="text-3xl font-bold tracking-tight text-ink-900 mb-8">Experience</h2>
+
+      <div class="space-y-12">
+
+        <!-- ARCO -->
+        <article class="grid md:grid-cols-[180px,1fr] gap-6">
+          <div class="text-sm">
+            <div class="font-semibold text-ink-900">ARCO</div>
+            <div class="text-ink-500">St. Louis, MO</div>
+            <div class="text-ink-400 mt-1">Nov 2024 – Present</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 mb-1">Data Engineer</h3>
+            <p class="text-ink-500 mb-4">A Family of Construction Companies</p>
+            <ul class="space-y-2 text-ink-600 text-[15px] leading-relaxed list-disc pl-5 marker:text-ink-300">
+              <li>Architected and scaled a Medallion Architecture on Microsoft Fabric and Azure Synapse, consolidating data from Salesforce, UKG, Procore, Vista, and 4+ enterprise systems into a unified lakehouse supporting a <strong class="text-ink-800">10x increase in data volume</strong>.</li>
+              <li>Led high-concurrency ETL/ELT pipelines using Azure Data Factory, Databricks, and Microsoft Fabric Data Pipelines, optimizing PySpark and SQL to <strong class="text-ink-800">reduce processing times by 70%</strong> on terabyte-scale datasets.</li>
+              <li>Engineered scalable Python REST APIs and Azure Function Apps for real-time data interoperability, improving cross-system query response times by <strong class="text-ink-800">30%</strong>.</li>
+              <li>Directed end-to-end dimensional modeling (Star/Snowflake schemas) on Azure Synapse and Microsoft Fabric, powering enterprise Power BI dashboards for executive-level insights.</li>
+              <li>Served as Technical Team and Project Lead, mentoring junior engineers and establishing standards for data governance and automated quality checks.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- BCITO -->
+        <article class="grid md:grid-cols-[180px,1fr] gap-6">
+          <div class="text-sm">
+            <div class="font-semibold text-ink-900">BCITO</div>
+            <div class="text-ink-500">Wellington, NZ</div>
+            <div class="text-ink-400 mt-1">Mar 2022 – Sep 2024</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 mb-1">Data Warehouse Developer</h3>
+            <p class="text-ink-500 mb-4">New Zealand's largest industry training organization</p>
+            <ul class="space-y-2 text-ink-600 text-[15px] leading-relaxed list-disc pl-5 marker:text-ink-300">
+              <li>Architected enterprise Data Warehouses on Azure SQL Managed Instance with optimized Star/Snowflake schemas, <strong class="text-ink-800">boosting query performance by 60%</strong>.</li>
+              <li>Engineered complex ETL/ELT pipelines integrating data from Salesforce, Dynamics, and Canvas via REST APIs and token-based authentication.</li>
+              <li>Spearheaded on-premises to Azure cloud migrations with <strong class="text-ink-800">zero downtime</strong>, achieving 3x scalability gains through SQL tuning.</li>
+              <li>Established data observability framework maintaining <strong class="text-ink-800">99.0% data accuracy</strong> across high-volume integrations.</li>
+              <li>Delivered Power BI solutions with Row-Level Security for <strong class="text-ink-800">200+ stakeholders</strong>; reduced deployment time by 50% via Azure DevOps CI/CD.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Equifax -->
+        <article class="grid md:grid-cols-[180px,1fr] gap-6">
+          <div class="text-sm">
+            <div class="font-semibold text-ink-900">Equifax</div>
+            <div class="text-ink-500">Auckland, NZ</div>
+            <div class="text-ink-400 mt-1">Sep 2021 – Mar 2022</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 mb-1">Data Analytics & Wrangling Analyst</h3>
+            <p class="text-ink-500 mb-4">Intermediate — credit reporting and analytics</p>
+            <ul class="space-y-2 text-ink-600 text-[15px] leading-relaxed list-disc pl-5 marker:text-ink-300">
+              <li>Engineered centralized data modeling layer with optimized SQL views, reducing IBM DB2 extraction time by <strong class="text-ink-800">60%</strong>.</li>
+              <li>Built automated Python validation frameworks maintaining <strong class="text-ink-800">99.5% accuracy</strong> for 1M+ daily credit reporting records.</li>
+              <li>Designed interactive Tableau dashboards translating complex risk assessments into real-time portfolio health monitoring.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- HQSC -->
+        <article class="grid md:grid-cols-[180px,1fr] gap-6">
+          <div class="text-sm">
+            <div class="font-semibold text-ink-900">HQSC NZ</div>
+            <div class="text-ink-500">Wellington, NZ</div>
+            <div class="text-ink-400 mt-1">Aug 2020 – Sep 2021</div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-ink-900 mb-1">Data Engineer</h3>
+            <p class="text-ink-500 mb-4">Health Quality & Safety Commission — national healthcare data infrastructure</p>
+            <ul class="space-y-2 text-ink-600 text-[15px] leading-relaxed list-disc pl-5 marker:text-ink-300">
+              <li>Architected mission-critical on-premises Data Warehouse integrating complex healthcare datasets from diverse public/private sources.</li>
+              <li>Engineered end-to-end ETL pipelines using Python, SQL, and R, ensuring <strong class="text-ink-800">100% compliance</strong> with data sovereignty and security policies.</li>
+              <li>Reduced query latency by <strong class="text-ink-800">50%</strong> via advanced indexing and partitioning for large-scale population health modeling.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section-anchor py-16 border-t border-ink-100">
+      <h2 class="text-3xl font-bold tracking-tight text-ink-900 mb-3">Side Projects</h2>
+      <p class="text-ink-500 mb-8">Full-stack AI applications I build to learn and to make smarter investments.</p>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <a href="https://github.com/jackson9413/buffett-lens" target="_blank" rel="noopener" class="block p-6 rounded-xl border border-ink-100 hover:border-ink-300 hover:shadow-sm transition group">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-semibold text-ink-900">Buffett Lens</h3>
+            <span class="text-ink-300 group-hover:text-ink-500 transition">↗</span>
+          </div>
+          <p class="text-sm text-ink-600 leading-relaxed">Chat with a Buffett-style AI analyst. Screener, watchlist, and position tracker powered by live fundamentals. Next.js + Supabase.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="skill-pill">Next.js</span>
+            <span class="skill-pill">Supabase</span>
+            <span class="skill-pill">AI</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jackson9413/neighborhood-scout" target="_blank" rel="noopener" class="block p-6 rounded-xl border border-ink-100 hover:border-ink-300 hover:shadow-sm transition group">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-semibold text-ink-900">Neighborhood Scout</h3>
+            <span class="text-ink-300 group-hover:text-ink-500 transition">↗</span>
+          </div>
+          <p class="text-sm text-ink-600 leading-relaxed">Local-first livability scorer for 84 US neighborhoods. Walk/transit/grocery/restaurants/parks/commute subscores. Flask + SQLite.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">SQLite</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jackson9413" target="_blank" rel="noopener" class="block p-6 rounded-xl border border-ink-100 hover:border-ink-300 hover:shadow-sm transition group">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-semibold text-ink-900">OpenClaw Cron Dashboard</h3>
+            <span class="text-ink-300 group-hover:text-ink-500 transition">↗</span>
+          </div>
+          <p class="text-sm text-ink-600 leading-relaxed">Local web UI for monitoring and rerunning scheduled AI jobs. Next.js + Tailwind, reads OpenClaw &amp; Hermes job state.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="skill-pill">Next.js</span>
+            <span class="skill-pill">Tailwind</span>
+            <span class="skill-pill">DevTools</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jackson9413" target="_blank" rel="noopener" class="block p-6 rounded-xl border border-ink-100 hover:border-ink-300 hover:shadow-sm transition group">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-semibold text-ink-900">More on GitHub</h3>
+            <span class="text-ink-300 group-hover:text-ink-500 transition">↗</span>
+          </div>
+          <p class="text-sm text-ink-600 leading-relaxed">Buffett-style value-investing screener, mortgage refi breakeven calculator, rent-vs-buy analyzer, and other tools.</p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">AI</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section-anchor py-16 border-t border-ink-100">
+      <h2 class="text-3xl font-bold tracking-tight text-ink-900 mb-8">Skills</h2>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">R</span>
+            <span class="skill-pill">PySpark</span>
+            <span class="skill-pill">PowerShell</span>
+            <span class="skill-pill">Bash</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">Cloud &amp; Data Platforms</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Microsoft Fabric</span>
+            <span class="skill-pill">Azure Data Factory</span>
+            <span class="skill-pill">Azure Synapse</span>
+            <span class="skill-pill">Azure SQL Server</span>
+            <span class="skill-pill">Azure Function Apps</span>
+            <span class="skill-pill">Databricks</span>
+            <span class="skill-pill">Microsoft Purview</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">Data Modeling &amp; Warehousing</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Medallion Architecture</span>
+            <span class="skill-pill">Star Schema</span>
+            <span class="skill-pill">Snowflake Schema</span>
+            <span class="skill-pill">Dimensional Modeling</span>
+            <span class="skill-pill">Data Governance</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">BI &amp; Visualization</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">Plotly</span>
+            <span class="skill-pill">R Shiny</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">Engineering Practices</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">CI/CD</span>
+            <span class="skill-pill">Git / GitHub</span>
+            <span class="skill-pill">Azure DevOps</span>
+            <span class="skill-pill">REST API</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Agile</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="section-anchor py-16 border-t border-ink-100">
+      <h2 class="text-3xl font-bold tracking-tight text-ink-900 mb-8">Education &amp; Certifications</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-4">Education</h3>
+          <div class="space-y-5">
+            <div>
+              <div class="font-semibold text-ink-900">M.S. in Analytics</div>
+              <div class="text-sm text-ink-600">Georgia Institute of Technology · 2023 – 2026</div>
+            </div>
+            <div>
+              <div class="font-semibold text-ink-900">Nanodegree, Data Engineer</div>
+              <div class="text-sm text-ink-600">Udacity · Feb – May 2022</div>
+            </div>
+            <div>
+              <div class="font-semibold text-ink-900">M.S. in Applied Data Science</div>
+              <div class="text-sm text-ink-600">University of Canterbury · 2019 – 2020</div>
+            </div>
+            <div>
+              <div class="font-semibold text-ink-900">B.S. in Agriculture Sciences</div>
+              <div class="text-sm text-ink-600">Jilin University · 2013 – 2017</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-4">Certifications</h3>
+          <ul class="space-y-2 text-ink-700 text-[15px]">
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Microsoft Certified: Fabric Analytics Engineer Associate</li>
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Microsoft Certified: Fabric Data Engineer Associate</li>
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Microsoft Certified: Azure Data Engineer Associate</li>
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Databricks Certified: Data Engineer Associate</li>
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Microsoft Certified: Azure AI Engineer Associate</li>
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Microsoft Certified: Azure Data Scientist Associate</li>
+            <li class="flex items-start gap-2"><span class="text-ink-300 mt-1">◆</span>Microsoft Certified: Power BI Data Analyst Associate</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section-anchor py-16 border-t border-ink-100">
+      <h2 class="text-3xl font-bold tracking-tight text-ink-900 mb-6">Get in touch</h2>
+      <p class="text-ink-600 max-w-xl mb-8">
+        Open to senior data engineer roles, contract work, and interesting AI/data collaborations.
+        Best way to reach me is email or LinkedIn.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="mailto:jqcheng9413@yahoo.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-ink-900 text-white text-sm font-medium hover:bg-ink-700 transition">
+          jqcheng9413@yahoo.com
+        </a>
+        <a href="https://www.linkedin.com/in/jiaqicheng9413" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:border-ink-400 hover:text-ink-900 transition">
+          LinkedIn Profile
+        </a>
+        <a href="https://github.com/jackson9413" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:border-ink-400 hover:text-ink-900 transition">
+          GitHub
+        </a>
+        <a href="tel:+13144411406" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:border-ink-400 hover:text-ink-900 transition">
+          +1 (314) 441-1406
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="py-10 border-t border-ink-100 text-sm text-ink-500 flex flex-wrap items-center justify-between gap-4">
+      <div>© <span id="year"></span> Jiaqi Cheng · Built with HTML &amp; Tailwind · Hosted on GitHub Pages</div>
+      <div class="flex gap-4">
+        <a href="https://github.com/jackson9413" target="_blank" rel="noopener" class="hover:text-ink-900 transition">GitHub</a>
+        <a href="https://www.linkedin.com/in/jiaqicheng9413" target="_blank" rel="noopener" class="hover:text-ink-900 transition">LinkedIn</a>
+        <a href="mailto:jqcheng9413@yahoo.com" class="hover:text-ink-900 transition">Email</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
